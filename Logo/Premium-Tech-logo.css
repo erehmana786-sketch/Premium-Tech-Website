@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+ 
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    letter-spacing: 1px;
+    display: inline-flex;
+  }
+ 
+  .logo-dark {
+    font-weight: 800;
+    color: #1e1b24;
+  }
+ 
+  .logo-violet {
+    font-weight: 800;
+    background: linear-gradient(90deg, #9d8cf0, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }

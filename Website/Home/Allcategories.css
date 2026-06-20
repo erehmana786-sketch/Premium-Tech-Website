@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #1d1d1f;
+}
+
+.nav-links li a.active {
+  color: #6d28d9;
+}
+
+/* ===== PAGE HEADER ===== */
+
+.cat-page-header {
+  text-align: center;
+  padding: 70px 24px 50px;
+}
+
+.cat-page-header h1 {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.cat-page-header p {
+  font-size: 16px;
+  color: #6e6e73;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ===== CATEGORIES GRID ===== */
+
+.cat-page-grid-section {
+  padding: 0 60px 110px;
+  background-color: #fafafa;
+  padding-top: 50px;
+}
+
+.cat-page-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.cat-page-card {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cat-page-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+.cat-page-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cat-page-img img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cat-page-card:hover .cat-page-img img {
+  transform: scale(1.08);
+}
+
+.cat-page-info {
+  padding: 18px 20px 22px;
+}
+
+.cat-page-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  transition: color 0.25s ease;
+}
+
+.cat-page-card:hover .cat-page-info h3 {
+  color: #6d28d9;
+}
+
+.cat-page-info p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #6e6e73;
+  line-height: 1.5;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .cat-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cat-page-grid-section {
+    padding: 50px 24px 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cat-page-grid {
+    grid-template-columns: 1fr;
+  }
+  .cat-page-header h1 {
+    font-size: 30px;
+  }
+}
