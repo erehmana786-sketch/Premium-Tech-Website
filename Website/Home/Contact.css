@@ -22,6 +22,8 @@ body {
   font-weight: 600;
   letter-spacing: -0.5px;
   margin-bottom: 14px;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .contact-header p {
@@ -29,6 +31,14 @@ body {
   color: #6e6e73;
   max-width: 480px;
   margin: 0 auto;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== CONTACT CONTENT ===== */
@@ -48,6 +58,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
 }
 
 .info-item {
@@ -88,6 +101,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 22px;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
 }
 
 .form-row {

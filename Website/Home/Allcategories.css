@@ -26,6 +26,8 @@ body {
   font-weight: 600;
   letter-spacing: -0.5px;
   margin-bottom: 12px;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .cat-page-header p {
@@ -33,6 +35,14 @@ body {
   color: #6e6e73;
   max-width: 500px;
   margin: 0 auto;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== CATEGORIES GRID ===== */
@@ -59,7 +69,18 @@ body {
   text-decoration: none;
   color: inherit;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+.cat-page-grid .cat-page-card:nth-child(1) { animation-delay: 0.35s; }
+.cat-page-grid .cat-page-card:nth-child(2) { animation-delay: 0.42s; }
+.cat-page-grid .cat-page-card:nth-child(3) { animation-delay: 0.49s; }
+.cat-page-grid .cat-page-card:nth-child(4) { animation-delay: 0.56s; }
+.cat-page-grid .cat-page-card:nth-child(5) { animation-delay: 0.63s; }
+.cat-page-grid .cat-page-card:nth-child(6) { animation-delay: 0.7s; }
+.cat-page-grid .cat-page-card:nth-child(7) { animation-delay: 0.77s; }
+.cat-page-grid .cat-page-card:nth-child(8) { animation-delay: 0.84s; }
 
 .cat-page-card:hover {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);

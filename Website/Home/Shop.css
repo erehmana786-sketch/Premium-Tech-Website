@@ -26,11 +26,21 @@ body {
   font-weight: 600;
   letter-spacing: -0.5px;
   margin-bottom: 12px;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .shop-header p {
   font-size: 16px;
   color: #6e6e73;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.15s;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== FILTER BAR ===== */
@@ -45,6 +55,9 @@ body {
   margin: 0 auto;
   padding: 20px 24px 40px;
   border-bottom: 1px solid #ececec;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
 }
 
 .filter-pills {
@@ -120,7 +133,23 @@ body {
   padding: 24px;
   text-align: left;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+.shop-grid .product-card:nth-child(1) { animation-delay: 0.4s; }
+.shop-grid .product-card:nth-child(2) { animation-delay: 0.46s; }
+.shop-grid .product-card:nth-child(3) { animation-delay: 0.52s; }
+.shop-grid .product-card:nth-child(4) { animation-delay: 0.58s; }
+.shop-grid .product-card:nth-child(5) { animation-delay: 0.64s; }
+.shop-grid .product-card:nth-child(6) { animation-delay: 0.7s; }
+.shop-grid .product-card:nth-child(7) { animation-delay: 0.76s; }
+.shop-grid .product-card:nth-child(8) { animation-delay: 0.82s; }
+.shop-grid .product-card:nth-child(9) { animation-delay: 0.88s; }
+.shop-grid .product-card:nth-child(10) { animation-delay: 0.94s; }
+.shop-grid .product-card:nth-child(11) { animation-delay: 1s; }
+.shop-grid .product-card:nth-child(12) { animation-delay: 1.06s; }
+.shop-grid .product-card:nth-child(13) { animation-delay: 1.12s; }
 
 .product-card:hover {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
@@ -169,6 +198,11 @@ body {
   color: #1d1d1f;
   margin-bottom: 10px;
   line-height: 1.4;
+}
+
+.product-name-link {
+  text-decoration: none;
+  display: block;
 }
 
 .product-price {

@@ -25,6 +25,8 @@ body {
   font-weight: 500;
   color: #86868b;
   margin-bottom: 18px;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .about-hero h1 {
@@ -33,12 +35,23 @@ body {
   letter-spacing: -0.5px;
   line-height: 1.18;
   margin-bottom: 20px;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.15s;
 }
 
 .about-hero p {
   font-size: 17px;
   color: #6e6e73;
   line-height: 1.6;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== STORY ===== */
@@ -50,6 +63,9 @@ body {
   align-items: center;
   gap: 70px;
   padding: 40px 60px 110px;
+  opacity: 0;
+  animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.45s;
 }
 
 .story-text {
@@ -121,7 +137,14 @@ body {
 
 .value-card {
   text-align: left;
+  opacity: 0;
+  animation: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+.values-grid .value-card:nth-child(1) { animation-delay: 0.1s; }
+.values-grid .value-card:nth-child(2) { animation-delay: 0.18s; }
+.values-grid .value-card:nth-child(3) { animation-delay: 0.26s; }
+.values-grid .value-card:nth-child(4) { animation-delay: 0.34s; }
 
 .value-icon {
   width: 50px;
@@ -200,4 +223,4 @@ body {
   .values-grid {
     grid-template-columns: 1fr;
   }
-} 
+}

@@ -8,6 +8,18 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #fafafa;
   color: #4b4b4b;
+  cursor: url('cursor-default.svg') 12 12, auto;
+}
+
+a,
+button,
+.category-card,
+.product-card,
+.add-btn,
+.pill,
+.opt-pill,
+.qty-btn {
+  cursor: url('cursor-pointer.svg') 18 18, pointer;
 }
 
 /* ===== NAVBAR ===== */
