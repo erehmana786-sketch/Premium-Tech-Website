@@ -8,18 +8,20 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: #fafafa;
   color: #4b4b4b;
-  cursor: url('cursor-default.svg') 12 12, auto;
+  cursor: url('cursor-default.svg') 12 12, auto !important;
 }
 
 a,
 button,
-.category-card,
-.product-card,
-.add-btn,
-.pill,
-.opt-pill,
-.qty-btn {
-  cursor: url('cursor-pointer.svg') 18 18, pointer;
+input[type="submit"],
+label {
+  cursor: url('cursor-pointer.svg') 18 18, pointer !important;
+}
+
+input,
+textarea,
+select {
+  cursor: url('cursor-default.svg') 12 12, text !important;
 }
 
 /* ===== NAVBAR ===== */
