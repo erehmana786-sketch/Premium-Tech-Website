@@ -59,13 +59,13 @@
         <img src="products/phone-case.png" alt="Diamante Floral Phone Case" id="mainImage">
       </div>
       <div class="pd-thumbs">
-        <button class="pd-thumb active" onclick="document.getElementById('mainImage').src='products/phone-case.png'">
+        <button class="pd-thumb active">
           <img src="products/phone-case.png" alt="Thumbnail 1">
         </button>
-        <button class="pd-thumb" onclick="document.getElementById('mainImage').src='products/phone-case.png'">
+        <button class="pd-thumb">
           <img src="products/phone-case.png" alt="Thumbnail 2">
         </button>
-        <button class="pd-thumb" onclick="document.getElementById('mainImage').src='products/phone-case.png'">
+        <button class="pd-thumb">
           <img src="products/phone-case.png" alt="Thumbnail 3">
         </button>
       </div>
@@ -219,33 +219,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    let qty = 1;
-    const qtyValue = document.getElementById('qtyValue');
-    document.getElementById('qtyPlus').addEventListener('click', () => {
-      qty++;
-      qtyValue.textContent = qty;
-    });
-    document.getElementById('qtyMinus').addEventListener('click', () => {
-      if (qty > 1) qty--;
-      qtyValue.textContent = qty;
-    });
-
-    document.querySelectorAll('.opt-pill').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.opt-pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
-
-    document.querySelectorAll('.pd-thumb').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.pd-thumb').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
-  </script>
 
 </body>
 </html>
